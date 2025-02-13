@@ -5,5 +5,5 @@
  */
 
 export default function Pages() {
-  return <div>Pages</div>;
+  return <div className="h-screen w-screen bg-[#999532]">Pages</div>;
 }

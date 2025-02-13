@@ -1,11 +1,8 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 
 import { seoMeta } from '@/config/seo';
 
 export default function SeoHead() {
-  const router = useRouter();
-
   return (
     <Head>
       <title>{seoMeta.title}</title>
@@ -17,8 +14,6 @@ export default function SeoHead() {
       <meta name="keywords" content={seoMeta.keywords} />
       <meta name="robots" content={seoMeta.robots} />
       <meta content={seoMeta.description} name="description" />
-      <meta property="og:url" content={`${seoMeta.url}${router.asPath}`} />
-      <link rel="canonical" href={`${seoMeta.url}${router.asPath}`} />
       {/* Open Graph */}
       <meta property="og:type" content={seoMeta.type} />
       <meta property="og:site_name" content={seoMeta.siteName} />
@@ -46,13 +41,13 @@ export default function SeoHead() {
       {/* Clarity埋点 */}
       <script
         type="text/javascript"
-        dangerouslySetInnerHTML={{
-          __html: `(function(c,l,a,r,i,t,y){
-              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-          })(window, document, "clarity", "script", "lex6ygv0t6");`,
-        }}
+        // dangerouslySetInnerHTML={{
+        //   __html: `(function(c,l,a,r,i,t,y){
+        //       c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        //       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        //       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        //   })(window, document, "clarity", "script", "lex6ygv0t6");`,
+        // }}
       />
     </Head>
   );
