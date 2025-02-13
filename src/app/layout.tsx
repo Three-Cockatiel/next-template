@@ -1,5 +1,6 @@
 import BaseLayout from '@/components/layout';
 import SeoHead from '@/components/seo-header';
+import { HeroUIProvider } from '@heroui/react';
 
 import '../styles/globals.css';
 
@@ -12,9 +13,9 @@ export default function RootLayout(props: { children: ReactNode }) {
     <html>
       <SeoHead />
       <body>
-        <main>
+        <HeroUIProvider>
           <BaseLayout>{children}</BaseLayout>
-        </main>
+        </HeroUIProvider>
       </body>
     </html>
   );

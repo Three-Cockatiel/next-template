@@ -3,4 +3,5 @@
  */
 export enum Home {
   BASE = '/',
+  ABOUT = '/about',
 }

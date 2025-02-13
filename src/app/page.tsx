@@ -4,6 +4,12 @@
  * @createDate 2024-05-07
  */
 
+import { Button } from '@heroui/react';
+
 export default function Pages() {
-  return <div className="h-screen w-screen bg-[#999532]">Pages</div>;
+  return (
+    <div className="mt-40 flex h-screen justify-center">
+      <Button color="primary">Click me</Button>
+    </div>
+  );
 }

@@ -8,5 +8,10 @@ const routes: RouteType[] = [
     name: '首页',
     phoneName: '首页',
   },
+  {
+    path: Home.ABOUT,
+    name: '关于我们',
+    phoneName: '关于我们',
+  },
 ];
 export default routes;
